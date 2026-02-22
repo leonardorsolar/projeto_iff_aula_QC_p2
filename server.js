@@ -5,7 +5,7 @@ import { initializeDatabase } from './src/config/migrations.js';
 import dbConfig from './src/config/database.js';
 
 const app = express();
-const HOST = 'localhost';
+//const HOST = 'localhost';
 const PORT = process.env.PORT || 3003;
 
 // Initialize database

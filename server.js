@@ -6,7 +6,7 @@ import dbConfig from './src/config/database.js';
 
 const app = express();
 //const HOST = 'localhost';
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 3000;
 
 // Initialize database
 console.log('🔧 Initializing database...');

@@ -1,5 +1,5 @@
 // Configuração da API
-const API_URL = 'http://localhost:3000/api/users';
+const API_URL = '/api/users';
 
 // Elementos do DOM
 const userForm = document.getElementById('userForm');

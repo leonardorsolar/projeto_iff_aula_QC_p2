@@ -10,6 +10,8 @@ Claro! Aqui está um **tutorial passo a passo para fazer o *deploy* do seu proje
 
 ### 1️⃣ Criar conta no Render
 
+Primeiro acesso:
+
 1. Acesse: **[https://render.com/](https://render.com/)**
 2. Clique em **Get Stardet**
 3. Faça login com **GitHub** (recomendado)
@@ -19,6 +21,8 @@ Claro! Aqui está um **tutorial passo a passo para fazer o *deploy* do seu proje
 7. Em Configure and deploy your new Web Service: Selecione o seu projeto, clique em Free e depois no final da página, clique em Deploy WebService
 8.Ocorrerá o build da aplicação: https://api-node-mvc-iff-2026.onrender.com/
 ---
+
+
 
 
 
@@ -59,6 +63,29 @@ Certifique que tem este trecho:
     "start": "node server.js"
   }
 }
+```
+Em produção, você não deve fixar o host como localhost.
+
+O Render precisa que o app escute em 0.0.0.0.
+
+Troque isso:
+
+const HOST = 'localhost';
+
+Por isso:
+
+const HOST = '0.0.0.0';
+
+OU ainda melhor (mais simples):
+
+
+Versão ideal para produção (Render)
+Remova o HOST completamente e deixe assim:
+
+```json
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+});
 ```
 
 ---

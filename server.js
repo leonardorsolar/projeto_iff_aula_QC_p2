@@ -54,9 +54,13 @@ app.use((req, res) => {
 });
 
 // Start server
-app.listen(PORT, HOST, () => {
-  console.log(`🚀 Server running at http://${HOST}:${PORT}`);
-  console.log(`📚 API documentation available at http://${HOST}:${PORT}/`);
+// app.listen(PORT, HOST, () => {
+//   console.log(`🚀 Server running at http://${HOST}:${PORT}`);
+//   console.log(`📚 API documentation available at http://${HOST}:${PORT}/`);
+// });
+
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
 });
 
 // Graceful shutdown
